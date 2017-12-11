@@ -2,10 +2,10 @@
 
 function populateDropdowns() {
     populateCondiments();
-    // let breads = document.getElementById("breads");
-    // let meats = document.getElementById("meats");
+    populateMeats();
     populateCheeses();
-    // let veggies = document.getElementById("veggies");
+    populateVeggies();
+    populateBreads();
 }
 
 function populateCondiments() {
@@ -27,6 +27,39 @@ function populateCheeses() {
         let option = document.createElement("option");
         option.innerText = key.replace("_"," ");
         option.value = cheeses[key];
+        dropdown.appendChild(option);
+    }
+}
+function populateMeats() {
+    let module = require("./meat");
+    let dropdown = document.getElementById("meats");
+    let meats = module.getMeats();
+    for (let key in meats) {
+        let option = document.createElement("option");
+        option.innerText = key.replace("_"," ");
+        option.value = meats[key];
+        dropdown.appendChild(option);
+    }
+}
+function populateVeggies() {
+    let module = require("./veggies");
+    let dropdown = document.getElementById("veggies");
+    let veggies = module.getVeggies();
+    for (let key in veggies) {
+        let option = document.createElement("option");
+        option.innerText = key.replace("_"," ");
+        option.value = veggies[key];
+        dropdown.appendChild(option);
+    }
+}
+function populateBreads() {
+    let module = require("./bread");
+    let dropdown = document.getElementById("breads");
+    let breads = module.getBreads();
+    for (let key in breads) {
+        let option = document.createElement("option");
+        option.innerText = key.replace("_"," ");
+        option.value = breads[key];
         dropdown.appendChild(option);
     }
 }
