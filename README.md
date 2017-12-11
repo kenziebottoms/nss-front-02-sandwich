@@ -2,7 +2,7 @@
 
 ## Requirements
 
-:white_check_mark: Your project should have one HTML file that has:
+Your project should have one HTML file that has:
 
 * :white_check_mark: A section of options for each sandwich part
 * :white_check_mark: The ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat")
