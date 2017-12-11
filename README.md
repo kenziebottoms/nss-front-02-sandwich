@@ -2,11 +2,11 @@
 
 ## Requirements
 
-Your project should have one HTML file that has:
+:white_check_mark: Your project should have one HTML file that has:
 
-* A section of options for each sandwich part
-* The ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat")
-* An empty DOM element into which the final sandwich order and its cost will be inserted
+* :white_check_mark: A section of options for each sandwich part
+* :white_check_mark: The ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat")
+* :white_check_mark: An empty DOM element into which the final sandwich order and its cost will be inserted
 
 Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules.
 
