@@ -10,57 +10,48 @@ function populateDropdowns() {
 
 function populateCondiments() {
     let module = require("./condiments");
-    let dropdown = document.getElementById("condiments");
+    let inputGroup = document.getElementById("condiments");
     let condiments = module.getCondiments();
-    for (let key in condiments) {
-        let option = document.createElement("option");
-        option.innerText = key.replace("_"," ");
-        option.value = condiments[key];
-        dropdown.appendChild(option);
-    }
+    createInputGroup(inputGroup, "condiments", condiments);
 }
 function populateCheeses() {
     let module = require("./cheese");
-    let dropdown = document.getElementById("cheeses");
+    let inputGroup = document.getElementById("cheeses");
     let cheeses = module.getCheeses();
-    for (let key in cheeses) {
-        let option = document.createElement("option");
-        option.innerText = key.replace("_"," ");
-        option.value = cheeses[key];
-        dropdown.appendChild(option);
-    }
+    createInputGroup(inputGroup, "cheeses", cheeses);
 }
+
 function populateMeats() {
     let module = require("./meat");
-    let dropdown = document.getElementById("meats");
+    let inputGroup = document.getElementById("meats");
     let meats = module.getMeats();
-    for (let key in meats) {
-        let option = document.createElement("option");
-        option.innerText = key.replace("_"," ");
-        option.value = meats[key];
-        dropdown.appendChild(option);
-    }
+    createInputGroup(inputGroup, "meats", meats);
 }
+
 function populateVeggies() {
     let module = require("./veggies");
-    let dropdown = document.getElementById("veggies");
+    let inputGroup = document.getElementById("veggies");
     let veggies = module.getVeggies();
-    for (let key in veggies) {
-        let option = document.createElement("option");
-        option.innerText = key.replace("_"," ");
-        option.value = veggies[key];
-        dropdown.appendChild(option);
-    }
+    createInputGroup(inputGroup, "veggies", veggies);
 }
 function populateBreads() {
     let module = require("./bread");
-    let dropdown = document.getElementById("breads");
+    let inputGroup = document.getElementById("breads");
     let breads = module.getBreads();
-    for (let key in breads) {
-        let option = document.createElement("option");
-        option.innerText = key.replace("_"," ");
-        option.value = breads[key];
-        dropdown.appendChild(option);
+    createInputGroup(inputGroup, "breads", breads);
+}
+
+function createInputGroup(inputGroup, name, menu) {
+    for (let key in menu) {
+        let span = document.createElement("span");
+        span.classList = "input-group-addon";
+        let input = document.createElement("input");
+        input.type = "checkbox";
+        input.name = name;
+        input.value = menu[key];
+        span.appendChild(input);
+        span.innerHTML += `&nbsp;${key.replace("_"," ")}`;
+        inputGroup.appendChild(span);
     }
 }
 
