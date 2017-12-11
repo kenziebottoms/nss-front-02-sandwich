@@ -10,7 +10,7 @@ let vegPrices = {
 
 module.exports.getVeggies = () => {
     return vegPrices;
-}
+};
 
 module.exports.addVeggie = veggie => {
-}
+};

@@ -9,7 +9,7 @@ let condimentPrices = {
 
 module.exports.getCondiments = () => {
     return condimentPrices;
-}
+};
 
 module.exports.addCondiment = condiment => {
-}
+};

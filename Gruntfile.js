@@ -4,7 +4,7 @@ module.exports = function(grunt) {
             "dist/bundle.js" : ["assets/js/main.js"],
         },
         jshint: {
-            files: ["assets/js/**/*.js"],
+            files: ["assets/js/*.js"],
             options: {
                 predef: ["document", "console", "$", "alert"],
                 esnext: true,
