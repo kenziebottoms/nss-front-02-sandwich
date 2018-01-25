@@ -1,33 +1,47 @@
 # Sandwich Maker
 
+![](https://img.shields.io/badge/data-static-lightgrey.svg)
+![](https://img.shields.io/badge/template-none-lightgrey.svg)
+![](https://img.shields.io/badge/js-jquery-blue.svg)
+![](https://img.shields.io/badge/modularity-browserify-yellow.svg)
+![](https://img.shields.io/badge/css_preprocessor-scss-ff69b4.svg)
+![](https://img.shields.io/badge/css_framework-bootstrap-5F2C7C.svg)
+![](https://img.shields.io/badge/mvp-working-brightgreen.svg)
+
+## Run locally
+
+```
+git clone git@github.com:kenziebottoms/nss-front-02-sandwich.git
+npm install
+grunt
+```
+
 ## Requirements
 
 Your project should have one HTML file that has:
 
-* :white_check_mark: A section of options for each sandwich part
-* :white_check_mark: The ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat")
-* :white_check_mark: An empty DOM element into which the final sandwich order and its cost will be inserted
+- [x] A section of options for each sandwich part
+- [x] The ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat")
+- [x] An empty DOM element into which the final sandwich order and its cost will be inserted
 
-Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules.
+- [x] Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules.
 
-* :white_check_mark: bread
-* :white_check_mark: meat
-* :white_check_mark: cheese
-* :white_check_mark: condiments
-* :white_check_mark: veggies
+    * [x] bread
+    * [x] meat
+    * [x] cheese
+    * [x] condiments
+    * [x] veggies
 
-:white_check_mark: The ingredient choices in each module should be stored as JS objects that contain the ingredients as keys and their cost as the value.
+- [x] The ingredient choices in each module should be stored as JS objects that contain the ingredients as keys and their cost as the value.
 
 ```Javascript
 {"turkey": 0.90,
 "bacon": 1.50}
 ```
 
-:white_check_mark: Make sure the ingredient objects cannot be accessed by the other modules except through an accessor (getter) method.
-
-:white_check_mark: Each module should expose, via `module.exports`, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient selected by the user. You will need to implement Browserify as a task in a Gruntfile, in order to compile your modules into a single JS file.
-
-:white_check_mark: You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.
+- [x] Make sure the ingredient objects cannot be accessed by the other modules except through an accessor (getter) method.
+- [x] Each module should expose, via `module.exports`, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient selected by the user. You will need to implement Browserify as a task in a Gruntfile, in order to compile your modules into a single JS file.
+- [x] You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.
 
 > Don't worry about exposing the prices to the user until you display the final cost. This is just an exercise, not a business model.
 
