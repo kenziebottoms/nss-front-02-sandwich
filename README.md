@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/data-static-lightgrey.svg)
 ![](https://img.shields.io/badge/template-none-lightgrey.svg)
-![](https://img.shields.io/badge/js-jquery-blue.svg)
+![](https://img.shields.io/badge/js-vanilla-yellow.svg)
 ![](https://img.shields.io/badge/modularity-browserify-yellow.svg)
 ![](https://img.shields.io/badge/css_preprocessor-scss-ff69b4.svg)
 ![](https://img.shields.io/badge/css_framework-bootstrap-5F2C7C.svg)
