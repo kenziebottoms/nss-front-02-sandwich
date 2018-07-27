@@ -12,8 +12,10 @@
 
 ```
 git clone git@github.com:kenziebottoms/nss-front-02-sandwich.git
+cd nss-front-02-sandwich
 npm install
 grunt
+hs -o
 ```
 
 ## Requirements
